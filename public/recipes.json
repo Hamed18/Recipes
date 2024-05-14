@@ -1,0 +1,58 @@
+[
+	{
+	  "recipe_id": 1,
+	  "recipe_name": "Spaghetti Bolognese",
+	  "recipe_img": "https://i.ibb.co/VvYt2bn/spagetti.jpg",
+	  "short_description": "Classic Italian pasta dish with rich tomato sauce",
+	  "ingredients": ["spaghetti", "ground beef", "olive oil", "parmesan cheese"],
+	  "preparing_time": 30,
+	  "calories": 450
+	},
+	{
+	  "recipe_id": 2,
+	  "recipe_name": "Vegetable Lasagna",
+	  "recipe_img": "https://i.ibb.co/cxnYXHr/lasegna.jpg",
+	  "short_description": "Layered pasta dish with vegetables and creamy cheese sauce",
+	  "ingredients": ["lasagna noodles", "spinach", "mushrooms", "mozzarella cheese"],
+	  "preparing_time": 45,
+	  "calories": 380
+	},
+	{
+		"recipe_id": 3,
+		"recipe_name": "Panta Ilish",
+		"recipe_img": "https://i.ibb.co/TWz6tZp/ilish.jpg",
+		"short_description": "Traditional Bengali dish of fermented rice and hilsa fish",
+		"ingredients": ["panta bhat", "ilish fish", "green chilies", "mustard oil", "coriander leaves"],
+		"preparing_time": 90,
+		"calories": 380
+	},  
+	{
+	  "recipe_id": 4,
+	  "recipe_name": "Homemade Pizza",
+	  "recipe_img": "https://i.ibb.co/VH2t5Fw/homemade-pizza.jpg",
+	  "short_description": "Classic homemade pizza with your favorite toppings",
+	  "ingredients": ["pizza dough", "tomato sauce", "mozzarella cheese", "mushrooms"],
+	  "preparing_time": 45,
+	  "calories": 420
+	},
+	{
+	  "recipe_id": 5,
+	  "recipe_name": "Chittagong Mezban",
+	  "recipe_img": "https://i.ibb.co/vsS6xSy/mezban.jpg",
+	  "short_description": "Spicy and flavorful meat curry from Chittagong region",
+	  "ingredients": ["beaf", "potatoes", "yogurt", "special spices", "onion", "garlic"],
+	  "preparing_time": 120,
+	  "calories": 500
+	},
+	{
+	  "recipe_id": 6,
+	  "recipe_name": "Dhaka Kacchi",
+	  "recipe_img": "https://i.ibb.co/6F8ZfQh/kacchi.jpg",
+	  "short_description": "Traditional slow-cooked rice and meat dish from Dhaka",
+	  "ingredients": ["mutton", "basmati rice", "yogurt", "spices","ghee"],
+	  "preparing_time": 120,
+	  "calories": 600
+	}
+  ]
+
+  
