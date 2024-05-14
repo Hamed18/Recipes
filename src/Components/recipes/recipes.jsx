@@ -7,12 +7,13 @@ const Recipes = () => {
 	useEffect( () =>{
        fetch('recipes.json')
 	   .then(res => res.json())
-	   .then(data => console.log(data))
+	//   .then(data => console.log(data))
+	     .then(data => setRecipes(data))
 	},[])
 
 	return (
-		<div>
-			
+		<div className="md:w-60">
+			<h3>Recipes length: {recipes.length}</h3>
 		</div>
 	);
 };
