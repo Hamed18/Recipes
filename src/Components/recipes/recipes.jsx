@@ -1,5 +1,15 @@
+import { useEffect } from "react";
+import { useState } from "react";
 
-const recipes = () => {
+const Recipes = () => {
+	const [recipes, setRecipes] = useState([]);
+
+	useEffect( () =>{
+       fetch('recipes.json')
+	   .then(res => res.json())
+	   .then(data => console.log(data))
+	},[])
+
 	return (
 		<div>
 			
@@ -7,4 +17,4 @@ const recipes = () => {
 	);
 };
 
-export default recipes;
+export default Recipes;

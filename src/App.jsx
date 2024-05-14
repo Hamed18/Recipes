@@ -1,13 +1,13 @@
 import './App.css'
 import Header from './Components/Header/Header'
-import recipes from './Components/recipes/recipes'
+import Recipes from './Components/Recipes/Recipes'
 
 function App() {
 
   return (
     <>
       <Header></Header>
-      <recipes></recipes>
+      <Recipes></Recipes>
     </>
   )
 }
