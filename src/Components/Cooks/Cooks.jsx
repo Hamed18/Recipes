@@ -1,36 +1,55 @@
+import CurrentlyCooking from '../CurrentlyCooking/CurrentlyCooking';
+import Cook from '../Cook/Cook'
+import { useState } from "react";
 
-const Cooks = ( ) => {
+const Cooks = ( {cooks}) => {
+
+	const [currentlyCookings, setCurrentlyCooking] = useState([])
+
+	const handleCurrentlyCooking = currentlyCooking =>{
+		const newCurrentlyCookings = [...currentlyCookings, currentlyCooking];
+		setCurrentlyCooking(newCurrentlyCookings);
+	}
+  
 	return (
 		<div className="w-1/3 border border-red-500 rounded-xl">
-           	<h3 className="text-center my-2 font-bold">Want To Cook: {}</h3>
+           	<h3 className="text-center my-2 font-bold">Want To Cook: {cooks.length}</h3>
 			<div className="mb-8 mx-4 flex flex-row justify-between">
 				<p className="text-center">Name</p>
 				<p className="text-center">Time</p>
 				<p className="text-center">Calories</p>
-
 			</div>
 			<hr />
-			<div className="p-2 m-2 border border-red-500 rounded-xl flex flex-row justify-between">
-			    <p className="text-center">Name</p>
-				<p className="text-center">Time</p>
-				<p className="text-center">Calories</p>
-				<button className="btn py-2 px-3 rounded-xl bg-green-500 hover:bg-green-900 hover:shadow-xl text-white">Preparing</button>
+            
+			<div>
+				{
+					cooks.map(cook =>
+						<Cook key={Cook.id} cook={cook} handleCurrentlyCooking={handleCurrentlyCooking}>
+						</Cook>
+					)
+				}
 			</div>
 
-			<hr />
 			<div className="my-4">
-			  <h3 className="text-center my-2 font-bold">Currently Cooking: {}</h3>
+			  <h3 className="text-center my-2 font-bold">Currently Cooking: {currentlyCookings.length}</h3>
+
 			  <div className="mb-8 mx-4 flex flex-row justify-between">
 				<p className="text-center">Name</p>
 				<p className="text-center">Time</p>
 				<p className="text-center">Calories</p>
 			  </div>
 			  <hr />
-			  <div className="p-2 m-2 border border-red-500 rounded-xl flex flex-row justify-between">
-			    <p className="text-center">Name</p>
-				<p className="text-center">Time</p>
-				<p className="text-center">Calories</p>
+             
+			  <div>
+				{
+					currentlyCookings.map((currentlyCooking,idx) =>
+						<CurrentlyCooking key={currentlyCooking.idx} currentlyCooking={currentlyCooking}>
+						</CurrentlyCooking>
+					)
+				}
 			  </div>
+
+			  
 
 			</div>
 

@@ -7,11 +7,12 @@ const Header = () => {
         <div className="nav flex flex-row justify-between m-4 p-4">
 			<h3 className="font-bold text-2xl">Homemade Recipes</h3>
 			<ul className="flex flex-row justify-between gap-4 p-2 bg-base-100 rounded-t-none">
-					<li><a href="">Home</a></li>
-					<li><a href="">Recipes</a></li>
-					<li><a href="">Search</a></li>
+					<li className='hover:text-gray-100 hover:bg-green-800 p-2 mx-4 rounded-xl font-bold'><a href="">Home</a></li>
+					<li className='hover:text-gray-100 hover:bg-green-800 p-2 mx-4 rounded-xl font-bold'><a href="">Recipes</a></li>
+					<li className='hover:text-gray-100 hover:bg-green-800 p-2 mx-4 rounded-xl font-bold'><a href="">About</a></li>
+					<li className='hover:text-gray-100 hover:bg-green-800 p-2 mx-4 rounded-xl font-bold'><a href="">Search</a></li>
 			</ul>
-			<h3>Search</h3>
+			<h3 className='bg-gray-100 hover:text-gray-100 hover:bg-green-800 p-2 mx-4 rounded-xl font-bold'>Search</h3>
 		</div>
 
 		<div className="relative w-full h-96 bg-cover bg-center rounded-xl " style={{backgroundImage: `url(${bannerImg})`}}>

@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import Recipe from '../Recipe/Recipe'
+import './Recipes.css'
 
-const Recipes = () => {
+const Recipes = ( {handleAddToCooks} ) => {
 	const [recipes, setRecipes] = useState([]);
 
 	useEffect( () =>{
@@ -12,9 +14,15 @@ const Recipes = () => {
 	},[])
 
 	return (
-		<div className="md:w-60">
-			<h3>Recipes length: {recipes.length}</h3>
-		</div>
+		    <div className="recipes-container">
+			   {
+				recipes.map(recipe =>  <Recipe 
+					    key={recipe.recipe_id}
+						recipe={recipe}>    
+						handleAddToCooks={handleAddToCooks}
+					 </Recipe>)
+			   }
+			</div>
 	);
 };
 
