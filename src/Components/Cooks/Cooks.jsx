@@ -1,5 +1,5 @@
 
-const Cooks = () => {
+const Cooks = ( ) => {
 	return (
 		<div className="w-1/3 border border-red-500 rounded-xl">
            	<h3 className="text-center my-2 font-bold">Want To Cook: {}</h3>
