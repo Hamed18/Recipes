@@ -28,7 +28,7 @@ const Cooks = ( {cooks}) => {
 			<div>
 				{
 					cooks.map((cook,idx) =>
-						<Cook key={Cook.id} cook={cook} count={idx} handleCurrentlyCooking={handleCurrentlyCooking}>
+						<Cook key={Cook.recipe_id} cook={cook} count={idx} handleCurrentlyCooking={handleCurrentlyCooking}>
 						</Cook>
 					)
 				}
@@ -41,13 +41,14 @@ const Cooks = ( {cooks}) => {
 				<p className="text-center">Name</p>
 				<p className="text-center">Time</p>
 				<p className="text-center">Calories</p>
+				<p className="text-center">Status</p>
 			  </div>
 			  <hr />
              
 			  <div>
 				{
 					currentlyCookings.map((currentlyCooking,idx) =>
-						<CurrentlyCooking key={currentlyCooking.idx} currentlyCooking={currentlyCookings}>
+						<CurrentlyCooking key={currentlyCooking.recipe_id} currentlyCooking={currentlyCooking} count2={idx}>
 						</CurrentlyCooking>
 					)
 				}

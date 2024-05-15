@@ -1,6 +1,6 @@
 
 const Cook = ({cook,count,handleCurrentlyCooking}) => {
-	const {recipe_id,recipe_name,preparing_time,calories} = cook;
+	const {recipe_name,preparing_time,calories} = cook;
 	return (
 		<div>
 			<div className="p-2 m-2 border border-red-500 rounded-xl flex flex-row justify-between">
