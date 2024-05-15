@@ -10,6 +10,9 @@ const Cooks = ( {cooks}) => {
 		const newCurrentlyCookings = [...currentlyCookings, currentlyCooking];
 		setCurrentlyCooking(newCurrentlyCookings);
 	}
+
+	//const count = cooks.length;
+	//console.log(count);
   
 	return (
 		<div className="w-1/3 border border-red-500 rounded-xl">
@@ -18,13 +21,14 @@ const Cooks = ( {cooks}) => {
 				<p className="text-center">Name</p>
 				<p className="text-center">Time</p>
 				<p className="text-center">Calories</p>
+				<p className="text-center">Status</p>
 			</div>
 			<hr />
             
 			<div>
 				{
-					cooks.map(cook =>
-						<Cook key={Cook.id} cook={cook} handleCurrentlyCooking={handleCurrentlyCooking}>
+					cooks.map((cook,idx) =>
+						<Cook key={Cook.id} cook={cook} count={idx} handleCurrentlyCooking={handleCurrentlyCooking}>
 						</Cook>
 					)
 				}
