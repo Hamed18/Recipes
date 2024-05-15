@@ -43,7 +43,7 @@ const Cooks = ( {cooks}) => {
 			  <div>
 				{
 					currentlyCookings.map((currentlyCooking,idx) =>
-						<CurrentlyCooking key={currentlyCooking.idx} currentlyCooking={currentlyCooking}>
+						<CurrentlyCooking key={currentlyCooking.idx} currentlyCooking={currentlyCookings}>
 						</CurrentlyCooking>
 					)
 				}

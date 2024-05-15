@@ -1,5 +1,6 @@
 
-const Recipe = ( {recipe,handleAddToCooks} ) => {
+const Recipe = ( {recipe, handleAddToCooks} ) => {
+	// console.log( handleAddToCooks )
 	const {recipe_img,recipe_name,short_description,ingredients,preparing_time,calories} = recipe;
 	return (
 		<div className="p-4 m-4 border border-red-500 rounded-xl w-[350px]">
@@ -25,7 +26,7 @@ const Recipe = ( {recipe,handleAddToCooks} ) => {
 				</div>
 			</div>
 
-			<button onClick={handleAddToCooks} className="btn py-2 px-3 rounded-xl bg-green-500 hover:bg-green-900 hover:shadow-xl text-white">
+			<button onClick={() => handleAddToCooks(recipe)} className="btn py-2 px-3 rounded-xl bg-green-500 hover:bg-green-900 hover:shadow-xl text-white">
 				Want to Cook
 			</button>
 		</div>

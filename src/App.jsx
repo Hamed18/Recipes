@@ -8,8 +8,9 @@ function App() {
   const [cooks, setCooks] = useState([])
 
   const handleAddToCooks = recipe =>{
-      const newCooks = [...cooks, recipe];
-      setCooks(newCooks);
+     //   console.log("Lift up the state")
+         const newCooks = [...cooks, recipe];
+         setCooks(newCooks);
   }
 
   return (
