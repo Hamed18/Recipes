@@ -1,6 +1,6 @@
 
 const Cook = ({cook,count,handleCurrentlyCooking}) => {
-	const {recipe_name,preparing_time,calories} = cook;
+	const {recipe_id,recipe_name,preparing_time,calories} = cook;
 	return (
 		<div>
 			<div className="p-2 m-2 border border-red-500 rounded-xl flex flex-row justify-between">
@@ -8,7 +8,7 @@ const Cook = ({cook,count,handleCurrentlyCooking}) => {
 			    <p className="text-center">{recipe_name}</p>
 				<p className="text-center">{preparing_time} min</p>
 				<p className="text-center">{calories}</p>
-				<button onClick={()=>handleCurrentlyCooking(cook)} className="btn py-2 px-3 rounded-xl bg-green-500 hover:bg-green-900 hover:shadow-xl text-white">Preparing</button>
+				<button onClick={()=>handleCurrentlyCooking(cook,recipe_id)} className="btn py-2 px-3 rounded-xl bg-green-500 hover:bg-green-900 hover:shadow-xl text-white">Preparing</button>
 			</div>
 
 			<hr />

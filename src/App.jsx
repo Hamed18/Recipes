@@ -15,10 +15,15 @@ function App() {
 
   const [currentlyCookings, setCurrentlyCooking] = useState([])
 
-	const handleCurrentlyCooking = currentlyCooking =>{
-		console.log(currentlyCooking)
+	const handleCurrentlyCooking = (currentlyCooking,ID) =>{
+		console.log(ID)
 		const newCurrentlyCookings = [...currentlyCookings, currentlyCooking];
 		setCurrentlyCooking(newCurrentlyCookings);
+
+    //setCooks(prevCooks => prevCooks.filter(cook => cook.ID !== ID))  {/* syntax error: cook.ID !== ID */}
+    const newCooks = cooks.filter(cook => cook.recipe_id !== ID)   
+    setCooks(newCooks);
+    console.log(cooks);
 	}
 
   return (
