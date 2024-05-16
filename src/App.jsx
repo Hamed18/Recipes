@@ -13,12 +13,20 @@ function App() {
          setCooks(newCooks);
   }
 
+  const [currentlyCookings, setCurrentlyCooking] = useState([])
+
+	const handleCurrentlyCooking = currentlyCooking =>{
+		console.log(currentlyCooking)
+		const newCurrentlyCookings = [...currentlyCookings, currentlyCooking];
+		setCurrentlyCooking(newCurrentlyCookings);
+	}
+
   return (
     <>
       <Header></Header>
       <div className='md:flex flex-row justify-between my-12 mx-8'>
           <Recipes handleAddToCooks={handleAddToCooks}></Recipes>
-          <Cooks cooks={cooks}></Cooks>
+          <Cooks cooks={cooks} handleCurrentlyCooking={handleCurrentlyCooking} currentlyCookings={currentlyCookings}></Cooks>
       </div>
     </>
   )

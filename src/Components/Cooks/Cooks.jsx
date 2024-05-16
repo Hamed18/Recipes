@@ -1,16 +1,7 @@
 import CurrentlyCooking from '../CurrentlyCooking/CurrentlyCooking';
 import Cook from '../Cook/Cook'
-import { useState } from "react";
 
-const Cooks = ( {cooks}) => {
-
-	const [currentlyCookings, setCurrentlyCooking] = useState([])
-
-	const handleCurrentlyCooking = currentlyCooking =>{
-		console.log(currentlyCooking)
-		const newCurrentlyCookings = [...currentlyCookings, currentlyCooking];
-		setCurrentlyCooking(newCurrentlyCookings);
-	}
+const Cooks = ( {cooks,handleCurrentlyCooking, currentlyCookings}) => {
 
 	//const count = cooks.length;
 	//console.log(currentlyCookings);
