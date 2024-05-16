@@ -6,7 +6,7 @@ const Cook = ({cook,count,handleCurrentlyCooking}) => {
 			<div className="p-2 m-2 border border-red-500 rounded-xl flex flex-row justify-between">
 			    <h3> {count+1} </h3>
 			    <p className="text-center">{recipe_name}</p>
-				<p className="text-center">{preparing_time}</p>
+				<p className="text-center">{preparing_time} min</p>
 				<p className="text-center">{calories}</p>
 				<button onClick={()=>handleCurrentlyCooking(cook)} className="btn py-2 px-3 rounded-xl bg-green-500 hover:bg-green-900 hover:shadow-xl text-white">Preparing</button>
 			</div>

@@ -19,6 +19,7 @@ const Cooks = ( {cooks}) => {
 		<div className="w-1/3 border border-red-500 rounded-xl">
            	<h3 className="text-center my-2 font-bold">Want To Cook: {cooks.length}</h3>
 			<div className="mb-8 mx-4 flex flex-row justify-between">
+				<p className="text-center">Serial</p>
 				<p className="text-center">Name</p>
 				<p className="text-center">Time</p>
 				<p className="text-center">Calories</p>
@@ -39,10 +40,10 @@ const Cooks = ( {cooks}) => {
 			  <h3 className="text-center my-2 font-bold">Currently Cooking: {currentlyCookings.length}</h3>
 
 			  <div className="mb-8 mx-4 flex flex-row justify-between">
+				<p className="text-center">Serial</p>
 				<p className="text-center">Name</p>
 				<p className="text-center">Time</p>
 				<p className="text-center">Calories</p>
-				<p className="text-center">Status</p>
 			  </div>
 			  <hr />
              
@@ -119,5 +120,4 @@ export default Cooks;
 			</div>
 
 			*/}
-
 
