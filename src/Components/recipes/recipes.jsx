@@ -5,7 +5,8 @@ import './Recipes.css'
 
 const Recipes = ( {handleAddToCooks} ) => {
 	const [recipes, setRecipes] = useState([]);
-
+  //  console.log(handleAddToCooks)
+  
 	useEffect( () =>{
        fetch('recipes.json')
 	   .then(res => res.json())
@@ -16,10 +17,10 @@ const Recipes = ( {handleAddToCooks} ) => {
 	return (
 		    <div className="recipes-container">
 			   {
-				recipes.map(recipe =>  <Recipe 
+				recipes.map(recipe =>  <Recipe
+					    handleAddToCooks={handleAddToCooks} 
 					    key={recipe.recipe_id}
 						recipe={recipe}>    
-						handleAddToCooks={handleAddToCooks}
 					 </Recipe>)
 			   }
 			</div>

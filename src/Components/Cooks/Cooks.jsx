@@ -7,12 +7,13 @@ const Cooks = ( {cooks}) => {
 	const [currentlyCookings, setCurrentlyCooking] = useState([])
 
 	const handleCurrentlyCooking = currentlyCooking =>{
+		console.log(currentlyCooking)
 		const newCurrentlyCookings = [...currentlyCookings, currentlyCooking];
 		setCurrentlyCooking(newCurrentlyCookings);
 	}
 
 	//const count = cooks.length;
-	//console.log(count);
+	//console.log(currentlyCookings);
   
 	return (
 		<div className="w-1/3 border border-red-500 rounded-xl">

@@ -8,7 +8,7 @@ const Cook = ({cook,count,handleCurrentlyCooking}) => {
 			    <p className="text-center">{recipe_name}</p>
 				<p className="text-center">{preparing_time}</p>
 				<p className="text-center">{calories}</p>
-				<button onClick={handleCurrentlyCooking} className="btn py-2 px-3 rounded-xl bg-green-500 hover:bg-green-900 hover:shadow-xl text-white">Preparing</button>
+				<button onClick={()=>handleCurrentlyCooking(cook)} className="btn py-2 px-3 rounded-xl bg-green-500 hover:bg-green-900 hover:shadow-xl text-white">Preparing</button>
 			</div>
 
 			<hr />
