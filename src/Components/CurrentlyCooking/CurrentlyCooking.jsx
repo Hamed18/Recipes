@@ -4,7 +4,7 @@ const CurrentlyCooking = ({currentlyCooking,count2}) => {
 
 	return (
 		<div>
-			<div className="p-2 m-2 border border-red-500 rounded-xl flex flex-row justify-between">
+			<div className="p-2 m-2 border border-green-500 rounded-xl flex flex-row justify-between bg-gray-200">
 			    <h3> {count2+1} </h3>
 			    <p className="text-center">{recipe_name}</p>
 				<p className="text-center">{preparing_time} min</p>

@@ -15,8 +15,11 @@ function App() {
 
   const [currentlyCookings, setCurrentlyCooking] = useState([])
 
-	const handleCurrentlyCooking = (currentlyCooking,ID) =>{
-		console.log(ID)
+  const [timeNeeded, setTimeNeeded] = useState(0);
+  const [cal, setCalories] = useState(0);
+
+	const handleCurrentlyCooking = (currentlyCooking,ID,time,calri) =>{
+		//console.log(ID)
 		const newCurrentlyCookings = [...currentlyCookings, currentlyCooking];
 		setCurrentlyCooking(newCurrentlyCookings);
 
@@ -24,6 +27,13 @@ function App() {
     const newCooks = cooks.filter(cook => cook.recipe_id !== ID)   
     setCooks(newCooks);
     console.log(cooks);
+
+    // update preparing time and calories
+    setTimeNeeded(timeNeeded+time);
+    setCalories(cal+calri);
+    console.log(timeNeeded);
+    console.log(calories);
+
 	}
 
   return (
@@ -31,7 +41,9 @@ function App() {
       <Header></Header>
       <div className='md:flex flex-row justify-between my-12 mx-8'>
           <Recipes handleAddToCooks={handleAddToCooks}></Recipes>
-          <Cooks cooks={cooks} handleCurrentlyCooking={handleCurrentlyCooking} currentlyCookings={currentlyCookings}></Cooks>
+          <Cooks cooks={cooks} handleCurrentlyCooking={handleCurrentlyCooking} currentlyCookings={currentlyCookings}
+                      timeNeeded={timeNeeded}  cal={cal}>
+          </Cooks>
       </div>
     </>
   )
